@@ -1,0 +1,4 @@
+[console_scripts]
+syntra-gen-manifest = syntra_testing.gen_manifest:main
+syntra-grade-aggregate = syntra_testing.grade_and_aggregate:main
+syntra-run-manifest = syntra_testing.run_manifest:main

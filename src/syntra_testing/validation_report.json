@@ -1,0 +1,14 @@
+{
+  "stats": {
+    "ARC-Challenge": {
+      "total_items": 20
+    },
+    "ARC-Easy": {
+      "total_items": 20
+    },
+    "GSM8K": {
+      "total_items": 20
+    }
+  },
+  "issues": []
+}

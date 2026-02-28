@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=70.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntra-testing"
+dynamic = ["version"]
+description = "Pure Python benchmarking suite for Syntra AI models"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+authors = [{name = "Syntra Team", email = "hans@example.com"}]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "numpy>=2.1.0",
+    "pandas>=2.2.0",
+    "datasets>=4.2.0",
+    "pyarrow>=18.0.0",
+    "pypdf>=4.3.0",
+    "sympy>=1.13.0",
+    "regex>=2024.5.15",
+    "matplotlib>=3.9.0",
+    "tqdm>=4.66.0",
+    "pytest>=8.3.0",
+    "pytest-mock>=3.14.0",
+    "flake8>=7.0.0",
+    "reportlab>=4.0.0",
+    "tenacity>=9.0.0",  # Added for retries
+    "requests>=2.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0.0",
+    "mypy>=1.11.0",
+]
+
+[project.scripts]
+syntra-gen-manifest = "syntra_testing.gen_manifest:main"
+syntra-run-manifest = "syntra_testing.run_manifest:main"
+syntra-grade-aggregate = "syntra_testing.grade_and_aggregate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88

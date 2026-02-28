@@ -1,0 +1,32 @@
+{
+  "aggregates": [
+    {
+      "source": "baseline",
+      "n": 50,
+      "accuracy": 0.0,
+      "parse_error_rate": 0.04,
+      "has_box_rate": 0.96,
+      "multi_box_rate": 0.0,
+      "median_latency_ms": NaN,
+      "median_completion_tokens": 561.0
+    },
+    {
+      "source": "syntra",
+      "n": 50,
+      "accuracy": 0.0,
+      "parse_error_rate": 0.02,
+      "has_box_rate": 0.98,
+      "multi_box_rate": 0.0,
+      "median_latency_ms": 16515.0844165,
+      "median_completion_tokens": NaN
+    }
+  ],
+  "mcnemar": {
+    "n_pairs": 50,
+    "b (baseline\u2192SYNTRA wins)": 0,
+    "c (SYNTRA\u2192baseline wins)": 0,
+    "discordant": 0,
+    "delta_acc": 0.0,
+    "mcnemar_p": null
+  }
+}

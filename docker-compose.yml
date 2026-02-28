@@ -1,0 +1,11 @@
+services:
+  syntra-testing:
+    build: .
+    volumes:
+      - ./runs:/app/runs
+      - ./benchmarks:/app/benchmarks
+    environment:
+      - SYNTRA_TEST_MODE=1
+      - CONCURRENCY=8
+    stdin_open: true
+    tty: true

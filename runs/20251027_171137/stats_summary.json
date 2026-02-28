@@ -1,0 +1,118 @@
+{
+  "timestamp": "20251027_171137",
+  "suites": {
+    "arc_challenge": {
+      "variants": {
+        "baseline": {
+          "n": 50,
+          "successes": 46,
+          "accuracy": 0.92,
+          "ci_wilson": [
+            0.8116149745493629,
+            0.9684509967442093
+          ],
+          "path": "runs/arc_challenge/20251027_171137/graded.arc.baseline.jsonl",
+          "by_type": {
+            "Unknown": {
+              "n": 50,
+              "successes": 46,
+              "accuracy": 0.92,
+              "ci_wilson": [
+                0.8116149745493629,
+                0.9684509967442093
+              ]
+            }
+          }
+        },
+        "syntra": {
+          "n": 50,
+          "successes": 48,
+          "accuracy": 0.96,
+          "ci_wilson": [
+            0.8653966212204534,
+            0.9889613473391734
+          ],
+          "path": "runs/arc_challenge/20251027_171137/graded.arc.syntra.jsonl",
+          "by_type": {
+            "Unknown": {
+              "n": 50,
+              "successes": 48,
+              "accuracy": 0.96,
+              "ci_wilson": [
+                0.8653966212204534,
+                0.9889613473391734
+              ]
+            }
+          }
+        }
+      },
+      "paired": {
+        "integrity": {
+          "paired_n": 50,
+          "missing_in_syntra_count": 0,
+          "missing_in_baseline_count": 0,
+          "duplicate_ids_baseline_count": 0,
+          "duplicate_ids_syntra_count": 0,
+          "missing_in_syntra_sample": [],
+          "missing_in_baseline_sample": [],
+          "duplicate_ids_baseline_sample": [],
+          "duplicate_ids_syntra_sample": []
+        },
+        "paired_n": 50,
+        "acc_baseline": 0.92,
+        "acc_syntra": 0.96,
+        "delta": 0.039999999999999925,
+        "mcnemar_p": 0.5,
+        "discordant": 2,
+        "n01": 2,
+        "n10": 0,
+        "delta_ci_approx": [
+          -0.0154371716450254,
+          0.09543717164502524
+        ],
+        "delta_ci_bootstrap": [
+          0.0,
+          0.1
+        ],
+        "cohens_h": 0.1707972628424348,
+        "b_win_rate": 1.0,
+        "b_win_rate_ci": [
+          0.34237195288961925,
+          1.0
+        ],
+        "power_guidance": {
+          "alpha": 0.05,
+          "target_power": 0.8,
+          "required_discordants": 4,
+          "discordant_rate": 0.04,
+          "estimated_paired_N": 100
+        }
+      }
+    }
+  },
+  "overall": {
+    "micro": {
+      "paired_item_n": 50,
+      "acc_baseline": 0.92,
+      "acc_syntra": 0.96,
+      "delta": 0.039999999999999925,
+      "delta_ci_approx": [
+        -0.0154371716450254,
+        0.09543717164502524
+      ],
+      "delta_ci_bootstrap": [
+        0.0,
+        0.1
+      ],
+      "cohens_h": 0.1707972628424348,
+      "pooled_discordant_rate": 0.04
+    },
+    "macro": {
+      "suite_count": 1,
+      "acc_baseline": 0.92,
+      "acc_syntra": 0.96,
+      "delta": 0.039999999999999925,
+      "cohens_h": 0.1707972628424348
+    }
+  }
+}

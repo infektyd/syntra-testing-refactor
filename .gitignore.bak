@@ -1,0 +1,80 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build artifacts
+.build/
+build/
+dist/
+*.egg-info/
+
+# Swift
+.swiftpm/
+.build/
+.clang-module-cache/
+
+# VSCode
+.vscode/
+
+# JetBrains
+.idea/
+
+# Other
+.copilot_context.md
+.grok/
+backups/
+export/
+runs/
+syntra_benchmark_share_20251023_101101 2/
+
+# Large files
+*.zip
+*.gz
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.log
+
+# Other project files
+.gitattributes
+.github/
+.venv/
+ARCHIVE_MANIFEST.md
+BENCHMARKS.md
+Makefile
+Package.swift
+README.md
+SHARE_READY.md
+Scripts/
+Sources/
+Tools/
+VENV_SETUP.md
+VERSION
+agents/
+assemble_handout.sh
+build_share_archive.sh
+config/
+docs/
+prompts/
+reorg_layout.sh
+requirements.txt
+subsample_benchmarks.py
+Benchmarks/
+
+# Audit reports
+audit_reports/

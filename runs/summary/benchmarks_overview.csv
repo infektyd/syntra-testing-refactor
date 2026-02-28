@@ -1,0 +1,4 @@
+benchmark,split,system,pass1,n,latency_mean_ms
+ARC-Challenge,validation,syntra,0.450,20,11.5
+CMT,test,syntra,0.204,49,
+GSM8K,test,syntra,0.000,20,8.5

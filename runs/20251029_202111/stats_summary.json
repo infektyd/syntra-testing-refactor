@@ -1,0 +1,118 @@
+{
+  "timestamp": "20251029_202111",
+  "suites": {
+    "cmt": {
+      "variants": {
+        "baseline": {
+          "n": 50,
+          "successes": 0,
+          "accuracy": 0.0,
+          "ci_wilson": [
+            0.0,
+            0.07135003417431873
+          ],
+          "path": "runs/cmt/20251029_202111/graded.cmt.baseline.jsonl",
+          "by_type": {
+            "Unknown": {
+              "n": 50,
+              "successes": 0,
+              "accuracy": 0.0,
+              "ci_wilson": [
+                0.0,
+                0.07135003417431873
+              ]
+            }
+          }
+        },
+        "syntra": {
+          "n": 50,
+          "successes": 0,
+          "accuracy": 0.0,
+          "ci_wilson": [
+            0.0,
+            0.07135003417431873
+          ],
+          "path": "runs/cmt/20251029_202111/graded.cmt.syntra.jsonl",
+          "by_type": {
+            "Unknown": {
+              "n": 50,
+              "successes": 0,
+              "accuracy": 0.0,
+              "ci_wilson": [
+                0.0,
+                0.07135003417431873
+              ]
+            }
+          }
+        }
+      },
+      "paired": {
+        "integrity": {
+          "paired_n": 50,
+          "missing_in_syntra_count": 0,
+          "missing_in_baseline_count": 0,
+          "duplicate_ids_baseline_count": 0,
+          "duplicate_ids_syntra_count": 0,
+          "missing_in_syntra_sample": [],
+          "missing_in_baseline_sample": [],
+          "duplicate_ids_baseline_sample": [],
+          "duplicate_ids_syntra_sample": []
+        },
+        "paired_n": 50,
+        "acc_baseline": 0.0,
+        "acc_syntra": 0.0,
+        "delta": 0.0,
+        "mcnemar_p": 1.0,
+        "discordant": 0,
+        "n01": 0,
+        "n10": 0,
+        "delta_ci_approx": [
+          0.0,
+          0.0
+        ],
+        "delta_ci_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "cohens_h": 0.0,
+        "b_win_rate": 0.5,
+        "b_win_rate_ci": [
+          0.0,
+          1.0
+        ],
+        "power_guidance": {
+          "alpha": 0.05,
+          "target_power": 0.8,
+          "required_discordants": 1000000000,
+          "discordant_rate": 0.0,
+          "estimated_paired_N": null
+        }
+      }
+    }
+  },
+  "overall": {
+    "micro": {
+      "paired_item_n": 50,
+      "acc_baseline": 0.0,
+      "acc_syntra": 0.0,
+      "delta": 0.0,
+      "delta_ci_approx": [
+        0.0,
+        0.0
+      ],
+      "delta_ci_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "cohens_h": 0.0,
+      "pooled_discordant_rate": 0.0
+    },
+    "macro": {
+      "suite_count": 1,
+      "acc_baseline": 0.0,
+      "acc_syntra": 0.0,
+      "delta": 0.0,
+      "cohens_h": 0.0
+    }
+  }
+}

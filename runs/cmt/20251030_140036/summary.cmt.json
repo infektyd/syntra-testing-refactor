@@ -1,0 +1,14 @@
+{
+  "suite": "cmt",
+  "n_items": 50,
+  "baseline": {
+    "pass@1": 0.0,
+    "avg_ms": 0.0
+  },
+  "syntra": {
+    "pass@1": 0.0,
+    "avg_ms": 161361.64148002001
+  },
+  "seed": 42,
+  "protocol": "cmt_boxed_v1"
+}

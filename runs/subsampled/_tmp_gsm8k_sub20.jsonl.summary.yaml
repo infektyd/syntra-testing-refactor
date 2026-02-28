@@ -1,0 +1,32 @@
+bootstrap_tvd_ci_95:
+- 0.033333333333333326
+- 0.2929166666666662
+full_n: 60
+pass_at_1_deviation_bound: 0.033333333333333326
+strata:
+  full_counts:
+    ADDITION: 20
+    GEOMETRY: 20
+    RATES: 20
+  full_dist:
+    ADDITION: 0.3333333333333333
+    GEOMETRY: 0.3333333333333333
+    RATES: 0.3333333333333333
+  max_abs_pct_deviation: 9.999999999999998
+  mean_abs_pct_deviation: 6.666666666666665
+  pct_deviation_per_stratum:
+    ADDITION: 4.999999999999999
+    GEOMETRY: 4.999999999999999
+    RATES: 9.999999999999998
+  sub_counts:
+    ADDITION: 7
+    GEOMETRY: 7
+    RATES: 6
+  sub_dist:
+    ADDITION: 0.35
+    GEOMETRY: 0.35
+    RATES: 0.3
+sub_n: 20
+validation:
+  deviation_under_10pct: true
+
