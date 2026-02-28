@@ -1,68 +1,50 @@
-# SyntraTesting: Benchmark Suite &amp; Dataset for Syntra AI Models
+---
+license: mit
+task_categories:
+  - text-generation
+  - evaluation
+tags:
+  - ai-evals
+  - benchmark
+  - reasoning
+  - syntra
+  - arc
+  - gsm8k
+  - condensed-matter-theory
+---
 
-## Package (Python CLI)
-Migrated from Swift. See usage in original README section below.
+# SyntraTesting Evals v4
 
-## HF Dataset
-Prepped for Hugging Face Datasets: prompts, sample runs, benchmarks.
+Complete benchmark suite for evaluating AI models on advanced reasoning tasks.
 
-**Dataset Config:** `syntra-evals`
-- **prompts**: CMT/physics/math prompts (JSONL)
-- **runs**: Sample model outputs &amp; stats (JSONL/MD)
-- **benchmarks**: Per-task dirs (ARC, CMT, GSM8K)
+## Contents
 
-Data compressed as TAR.GZ in `data/splits/`.
+| Split | File | Description |
+|-------|------|-------------|
+| prompts | `data/splits/prompts.tar.gz` (~60KB) | CMT prompts, coherence structures, drift resilience, logic, ethics |
+| benchmarks | `data/splits/benchmarks.tar.gz` (~36KB) | ARC, CMT, GSM8K benchmark data and utilities |
+| runs | `data/splits/runs.tar.gz` (~4.4MB) | Sample evaluation runs with graded results |
+| resources | `data/splits/resources.tar.gz` (~500KB) | Official CMT answers, type maps, utilities |
 
-### Load Dataset
+## Key Files (after extraction)
+
+- `prompts/suites/hf_cmt.jsonl` - Main CMT benchmark prompts
+- `prompts/suites/official_cmt.jsonl` - Official CMT evaluation set  
+- `resources/official_cmt_answers.jsonl` - Gold standard answers
+- `Tools/grading/` - Grading scripts for evaluating model outputs
+
+## Usage
+
 ```bash
-# Untar first
-cd data/splits
+# Download and extract
+huggingface-cli download Infektyd/syntra-testing-evals-v4 --repo-type dataset --local-dir syntra-evals
+cd syntra-evals/data/splits
 tar xzf prompts.tar.gz
-tar xzf runs.tar.gz
 tar xzf benchmarks.tar.gz
+tar xzf resources.tar.gz
 ```
 
-```python
-from datasets import load_dataset
+## Related
 
-# Local after untar
-ds = load_dataset(&quot;json&quot;, data_files={&quot;train&quot;: &quot;data/splits/prompts/prompts/CMT prompts.jsonl&quot;})
-
-# Or HF repo (after upload)
-ds = load_dataset(&quot;syntraTesting/syntra-testing-evals&quot;, &quot;syntra-evals&quot;)
-prompt = ds[&quot;prompts&quot;][0][&quot;prompt&quot;]
-```
-
-See [card.yaml](card.yaml) for metadata.
-
-### Gradio Demo (Bench Run UI)
-Standalone Space: [link after upload]
-
-Run locally:
-```bash
-cd demos
-pip install -r requirements_space.txt
-python app.py
-```
-
-Select prompt from CMT suite, input local Syntra endpoint (e.g. http://127.0.0.1:8081), run trial, get metrics.
-
-## Upload to HF Datasets
-```bash
-huggingface-cli login  # token with write access
-
-# Create dataset repo at https://huggingface.co/new-dataset?repo-type=dataset (e.g. syntraTesting/syntra-testing-evals)
-
-# From project root
-huggingface-cli upload syntraTesting/syntra-testing-evals data/ card.yaml README.md Makefile pyproject.toml Sources/ --repo-type dataset --include=&quot;data/*&quot; --exclude=&quot;data/splits/*.tar.gz/*&quot;  # or specific
-
-# Better: git clone https://huggingface.co/datasets/syntraTesting/syntra-testing-evals
-# cp -r data/ card.yaml README.md ...
-# git add . &amp;&amp; git commit -m &quot;Add data&quot; &amp;&amp; git push
-```
-
-## Original Package Usage
-[Original content...]
-
-# Migrated syntraTesting Python Version
-... (paste original README content)
+- **GitHub**: https://github.com/infektyd/syntra-testing-refactor
+- **Author**: Hans Axelsson
