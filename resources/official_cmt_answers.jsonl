@@ -1,0 +1,69 @@
+{"id":"cmt_other_01","modality":"numeric","answer":"1; 3"}
+{"id":"cmt_other_02","modality":"multiple_choice","answer":"c"}
+{"id":"cmt_other_03","modality":"algebraic","answer":"2^{N/2-1}; c=1/2"}
+{"id":"cmt_other_04","modality":"algebraic","answer":"-t(p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma})-U(m_{i,\\uparrow}-1/2)(m_{i,\\downarrow}-1/2)-\\mu(m_{i,\\uparrow}-m_{i,\\downarrow})-\\mu"}
+{"id":"cmt_hf_01","modality":"multiple_choice","answer":"a; c"}
+{"id":"cmt_ed_01","modality":"multiple_choice","answer":"a; b; d"}
+{"id":"cmt_vmc_01","modality":"multiple_choice","answer":"a; d; e"}
+{"id":"cmt_dmrg_01","modality":"multiple_choice","answer":"d"}
+{"id":"cmt_qmc_01","modality":"multiple_choice","answer":"b; i"}
+{"id":"cmt_qmc_02","modality":"multiple_choice","answer":"e"}
+{"id":"cmt_qmc_03","modality":"multiple_choice","answer":"c"}
+{"id":"cmt_vmc_02","modality":"multiple_choice","answer":"c"}
+{"id":"cmt_ed_02","modality":"multiple_choice","answer":"a; b; c; d; e"}
+{"id":"cmt_ed_03","modality":"multiple_choice","answer":"a; c"}
+{"id":"cmt_ed_04","modality":"numeric","answer":"\\boxed{5}"}
+{"id":"cmt_qmc_04","modality":"multiple_choice","answer":"c; d"}
+{"id":"cmt_ed_05","modality":"multiple_choice","answer":"a; c; e; g"}
+{"id":"cmt_ed_06","modality":"multiple_choice","answer":"a; c; d"}
+{"id":"cmt_ed_07","modality":"numeric","answer":"4"}
+{"id": "hf_hf_000", "modality": "algebraic", "answer": "$\\boxed{U_1/2}$", "type": "HF"}
+{"id": "hf_hf_001", "modality": "algebraic", "answer": "$\\boxed{\\langle c_\\uparrow^\\dagger(k) c_\\uparrow(k) \\rangle; \\langle c_\\downarrow^\\dagger(k) c_\\downarrow(k) \\rangle}$", "type": "HF"}
+{"id": "hf_hf_002", "modality": "algebraic", "answer": "$\\boxed{(2.09, 1.21); (0., 2.41); (-2.09, 1.21); (-2.09, -1.21); (0., -2.41); (2.09, -1.21)}$", "type": "HF"}
+{"id": "hf_hf_003", "modality": "algebraic", "answer": "$\\boxed{16N_q^2}$", "type": "HF"}
+{"id": "hf_hf_004", "modality": "multiple_choice", "answer": "$\\boxed{c}$", "type": "HF"}
+{"id": "hf_ed_005", "modality": "multiple_choice", "answer": "$\\boxed{a; b; d}$", "type": "ED"}
+{"id": "hf_vmc_006", "modality": "multiple_choice", "answer": "$\\boxed{a; b; d}$", "type": "VMC"}
+{"id": "hf_dmrg_007", "modality": "multiple_choice", "answer": "$\\boxed{d}$", "type": "DMRG"}
+{"id": "hf_qmc_008", "modality": "multiple_choice", "answer": "$\\boxed{b;f;i}$", "type": "QMC"}
+{"id": "hf_qmc_009", "modality": "multiple_choice", "answer": "$\\boxed{b;e}$", "type": "QMC"}
+{"id": "hf_qmc_010", "modality": "multiple_choice", "answer": "$\\boxed{g}$", "type": "QMC"}
+{"id": "hf_dmrg_011", "modality": "algebraic", "answer": "$\\boxed{2^{N/2-1}; c=1/2}$", "type": "DMRG"}
+{"id": "hf_dmrg_012", "modality": "multiple_choice", "answer": "$\\boxed{c;e}$", "type": "DMRG"}
+{"id": "hf_vmc_013", "modality": "multiple_choice", "answer": "$\\boxed{d;e}$", "type": "VMC"}
+{"id": "hf_ed_014", "modality": "multiple_choice", "answer": "$\\boxed{b; e}$", "type": "ED"}
+{"id": "hf_ed_015", "modality": "multiple_choice", "answer": "$\\boxed{a; d}$", "type": "ED"}
+{"id": "hf_ed_016", "modality": "numeric", "answer": "$\\boxed{7}$", "type": "ED"}
+{"id": "hf_other_017", "modality": "algebraic", "answer": "$\\boxed{-t (p^{\\dagger}_{i,\\sigma}p_{j,\\sigma}+p^{\\dagger}_{j,\\sigma}p_{i,\\sigma})-U (m_{i,\\uparrow}-\\frac{1}{2})(m_{i,\\downarrow}-\\frac{1}{2})-\\mu (m_{i,\\uparrow}-m_{i,\\downarrow}) -\\mu}$", "type": "Other"}
+{"id": "hf_qmc_018", "modality": "multiple_choice", "answer": "$\\boxed{a;b}$", "type": "QMC"}
+{"id": "hf_ed_019", "modality": "multiple_choice", "answer": "$\\boxed{a}$", "type": "ED"}
+{"id": "hf_ed_020", "modality": "multiple_choice", "answer": "$\\boxed{a; c}$", "type": "ED"}
+{"id": "hf_peps_021", "modality": "algebraic", "answer": "$\\boxed{N_k B}$", "type": "PEPS"}
+{"id": "hf_ed_022", "modality": "numeric", "answer": "$\\boxed{4}$", "type": "ED"}
+{"id": "hf_other_023", "modality": "algebraic", "answer": "$\\boxed{(0.200,0.003,0.017,0.027,0.038)}$", "type": "Other"}
+{"id": "hf_qmc_024", "modality": "multiple_choice", "answer": "$\\boxed{c; d; e}$", "type": "QMC"}
+{"id": "hf_ed_025", "modality": "multiple_choice", "answer": "$\\boxed{b; c; e}$", "type": "ED"}
+{"id": "hf_other_026", "modality": "algebraic", "answer": "$\\boxed{O_n=E_n-E_{n-1}}$", "type": "Other"}
+{"id": "hf_qmc_027", "modality": "multiple_choice", "answer": "$\\boxed{d; g}$", "type": "QMC"}
+{"id": "hf_dmrg_028", "modality": "multiple_choice", "answer": "$\\boxed{a}$", "type": "DMRG"}
+{"id": "hf_other_029", "modality": "multiple_choice", "answer": "$\\boxed{b;c}$", "type": "Other"}
+{"id": "hf_other_030", "modality": "multiple_choice", "answer": "$\\boxed{a;b;c}$", "type": "Other"}
+{"id": "hf_other_031", "modality": "multiple_choice", "answer": "$\\boxed{a;c}$", "type": "Other"}
+{"id": "hf_other_032", "modality": "algebraic", "answer": "$\\boxed{\\mu-tq^2B/4}$", "type": "Other"}
+{"id": "hf_other_033", "modality": "multiple_choice", "answer": "$\\boxed{c}$", "type": "Other"}
+{"id": "hf_other_034", "modality": "multiple_choice", "answer": "$\\boxed{a;c}$", "type": "Other"}
+{"id": "hf_other_035", "modality": "multiple_choice", "answer": "$\\boxed{a;b}$", "type": "Other"}
+{"id": "hf_peps_036", "modality": "multiple_choice", "answer": "$\\boxed{g}$", "type": "PEPS"}
+{"id": "hf_other_037", "modality": "algebraic", "answer": "$\\boxed{1; 3}$", "type": "Other"}
+{"id": "hf_other_038", "modality": "multiple_choice", "answer": "$\\boxed{a;d;i}$", "type": "Other"}
+{"id": "hf_other_039", "modality": "algebraic", "answer": "$\\boxed{2t_1(t_1/t_2)^n}$", "type": "Other"}
+{"id": "hf_other_040", "modality": "multiple_choice", "answer": "$\\boxed{a;d;e}$", "type": "Other"}
+{"id": "hf_other_041", "modality": "algebraic", "answer": "$\\boxed{\\frac{2\\tanh(\\frac{\\beta \\omega}{2})}{\\omega}}$", "type": "Other"}
+{"id": "hf_sm_042", "modality": "algebraic", "answer": "$\\boxed{D_o = \\frac{\\tau^2 \\rho v_0^2 \\Omega (2+\\rho)}{[(1+\\rho)^2 + (\\Omega \\tau)^2][1+(\\Omega \\tau)^2]}}$", "type": "SM"}
+{"id": "hf_sm_043", "modality": "multiple_choice", "answer": "$\\boxed{c}$", "type": "SM"}
+{"id": "hf_sm_044", "modality": "algebraic", "answer": "$\\boxed{K_c = \\sigma [1 - \\frac{1}{\\sqrt{3}}]\\sqrt{\\gamma + \\frac{2\\sigma^2}{3}(1 + \\sqrt{1 + \\frac{3\\gamma}{\\sigma^2}})}}$", "type": "SM"}
+{"id": "hf_sm_045", "modality": "multiple_choice", "answer": "$\\boxed{d}$", "type": "SM"}
+{"id": "hf_sm_046", "modality": "algebraic", "answer": "$\\boxed{\\frac{(p + x^3)^2}{4 x^4} + 4 x^2}$", "type": "SM"}
+{"id": "hf_other_047", "modality": "algebraic", "answer": "$\\boxed{2,2,1}$", "type": "Other"}
+{"id": "hf_peps_048", "modality": "numeric", "answer": "$\\boxed{6}$", "type": "PEPS"}
+{"id": "hf_sm_049", "modality": "algebraic", "answer": "$\\boxed{0.33, 0.27}$", "type": "SM"}

@@ -1,0 +1,26 @@
+bootstrap_tvd_ci_95:
+- 0.0
+- 0.5
+full_n: 4
+pass_at_1_deviation_bound: 0.0
+strata:
+  full_counts:
+    MEDIUM: 1
+    SHORT: 3
+  full_dist:
+    MEDIUM: 0.25
+    SHORT: 0.75
+  max_abs_pct_deviation: 0.0
+  mean_abs_pct_deviation: 0.0
+  pct_deviation_per_stratum:
+    MEDIUM: 0.0
+    SHORT: 0.0
+  sub_counts:
+    MEDIUM: 1
+    SHORT: 3
+  sub_dist:
+    MEDIUM: 0.25
+    SHORT: 0.75
+sub_n: 4
+validation:
+  deviation_under_10pct: true

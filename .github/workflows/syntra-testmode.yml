@@ -1,0 +1,63 @@
+# SYNTRA Test Mode CI Workflow
+# Purpose: Full benchmark suite testing in test mode
+# Environment: SYNTRA_TEST_MODE=1 for testing without live API calls
+# Features: Validates ARC, GSM8K, CMT benchmarks, aggregates results
+
+name: SYNTRA Test Mode CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-benchmarks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SYNTRA_TEST_MODE: 1
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e .
+          pip install pytest pytest-mock
+
+      - name: Run benchmark tests
+        run: make bench-all
+
+      - name: Run all tests
+        run: make test-all
+
+      - name: Display summary
+        if: always()
+        run: |
+          if [ -f runs/summary/benchmarks_overview.md ]; then
+            echo "=== Benchmark Overview ==="
+            head -n 60 runs/summary/benchmarks_overview.md
+          else
+            echo "No benchmark summary generated"
+          fi
+
+      - name: Upload test artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testmode-artifacts
+          path: |
+            runs/summary/*.md
+            runs/summary/*.csv
+            runs/**/*.log
+            runs/**/reports/*.md
+          if-no-files-found: ignore

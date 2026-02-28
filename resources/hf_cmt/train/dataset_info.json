@@ -1,0 +1,58 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "benchmark_data",
+  "dataset_size": 62110,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/AnonBenchmark322/benchmark_data@b88db83f3815c134d658ecf2c35f5e62a2700e93/data/cmt_data.jsonl": {
+      "num_bytes": 66682,
+      "checksum": null
+    }
+  },
+  "download_size": 66682,
+  "features": {
+    "prompt": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "parameters": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "functions": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "solution": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "index": {
+      "dtype": "int64",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 128792,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 62110,
+      "num_examples": 50,
+      "dataset_name": "benchmark_data"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

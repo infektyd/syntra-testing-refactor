@@ -1,0 +1,55 @@
+datasets:
+  - config-name: syntra-evals
+    data_files:
+      - split: prompts
+        path: data/splits/prompts.tar.gz
+      - split: runs
+        path: data/splits/runs.tar.gz
+      - split: benchmarks
+        path: data/splits/benchmarks.tar.gz
+      - split: resources
+        path: data/splits/resources.tar.gz
+    description: |
+      SyntraTesting Evals Dataset v3: Complete benchmark suite for evaluating AI models on advanced reasoning tasks.
+      
+      **Contents:**
+      - **prompts/** - All prompt suites including CMT prompts, coherence structures, drift resilience, logic, ethics tests
+      - **benchmarks/** - ARC, CMT, GSM8K benchmark data and utilities
+      - **runs/** - Sample evaluation runs with results
+      - **resources/** - Arrow-format hf_cmt dataset, official answers, research papers (PDF)
+      - **Tools/** - Grading scripts, runners, visualization, and utilities
+      
+      **Key Files:**
+      - `prompts/suites/hf_cmt.jsonl` - Main CMT benchmark prompts
+      - `prompts/suites/official_cmt.jsonl` - Official CMT evaluation set
+      - `resources/hf_cmt/` - HuggingFace Arrow format dataset
+      - `resources/official_cmt_answers.jsonl` - Gold standard answers
+      - `resources/2510.05228v1.pdf` - Related research paper
+      
+      Compressed sizes: Prompts ~60KB, Benchmarks ~36KB, Runs ~4.4MB, Resources ~500KB.
+      
+      Untar to access: `tar xzf data/splits/<file>.tar.gz`
+      
+      Includes grading tools in Tools/grading/ for evaluating model outputs.
+    tags:
+      - ai-evals
+      - benchmark
+      - condensed-matter-theory
+      - physics
+      - math
+      - reasoning
+      - syntra
+      - arc
+      - gsm8k
+    citations:
+      - title: Syntra Framework
+        type: webpage
+        url: https://syntra.ai
+      - title: Syntra Testing Evals
+        type: dataset
+        url: https://huggingface.co/datasets/syntraai/syntra-testing-evals-v3
+    license: mit
+    task_categories:
+      - text-generation
+      - evaluation
+    size_in_mb: 6

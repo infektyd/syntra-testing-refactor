@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "description": "Global benchmark type registry for SyntraCMT evaluation framework",
+  "types": [
+    {
+      "code": "HF",
+      "name": "Hartree-Fock",
+      "category": "CMT",
+      "description": "Hartree-Fock mean-field approximation problems"
+    },
+    {
+      "code": "ED",
+      "name": "Exact Diagonalization",
+      "category": "CMT",
+      "description": "Exact diagonalization of quantum many-body systems"
+    },
+    {
+      "code": "DMRG",
+      "name": "Density Matrix Renormalization Group",
+      "category": "CMT",
+      "description": "DMRG tensor network method problems"
+    },
+    {
+      "code": "VMC",
+      "name": "Variational Monte Carlo",
+      "category": "CMT",
+      "description": "Variational Monte Carlo quantum simulations"
+    },
+    {
+      "code": "QMC",
+      "name": "Quantum Monte Carlo",
+      "category": "CMT",
+      "description": "Quantum Monte Carlo stochastic methods"
+    },
+    {
+      "code": "PEPS",
+      "name": "Projected Entangled Pair States",
+      "category": "CMT",
+      "description": "PEPS tensor network ansatz problems"
+    },
+    {
+      "code": "SM",
+      "name": "Spin Model",
+      "category": "CMT",
+      "description": "Spin lattice models (Heisenberg, Ising, etc.)"
+    },
+     {
+       "code": "MCQ_ARC",
+       "name": "Multiple Choice - AI2 Reasoning Challenge",
+       "category": "QA",
+       "description": "Grade-school science multiple-choice questions from Allen Institute"
+     },
+     {
+       "code": "GSM8K_FREE",
+       "name": "Free-form Math - GSM8K",
+       "category": "Math",
+       "description": "Grade-school math word problems requiring numeric answers"
+     }
+  ]
+}

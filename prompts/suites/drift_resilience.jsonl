@@ -1,0 +1,5 @@
+{"id":"drift_resilience_baseline_01","content":"Summarize the same incident response policy in three concise bullet-style sentences suitable for on-call engineers.","metadata":{"suite":"drift_resilience"}}
+{"id":"drift_resilience_variant_02","content":"Paraphrase the onboarding checklist for remote analysts so it emphasizes identical steps but uses different wording than the original brief.","metadata":{"suite":"drift_resilience"}}
+{"id":"drift_resilience_perturb_03","content":"Rephrase an internal memo about rotating API keys every 30 days while keeping the directives and timeline unchanged.","metadata":{"suite":"drift_resilience"}}
+{"id":"drift_resilience_equivalence_04","content":"Provide an alternate phrasing of the quarterly ethics review workflow, ensuring each stage maps one-to-one with the baseline version.","metadata":{"suite":"drift_resilience"}}
+{"id":"drift_resilience_consistency_05","content":"Restate the facilities evacuation script with the same ordered instructions, preserving intent but varying natural language.","metadata":{"suite":"drift_resilience"}}

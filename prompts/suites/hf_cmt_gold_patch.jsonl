@@ -1,0 +1,20 @@
+{
+  "index": 12,
+  "old_solution": "$\\boxed{c;e}$",
+  "new_solution": "$\\boxed{c}$",
+  "needs_manual_review": false,
+  "reason": "Removed invalid option(s) ['e'] not present in prompt choices.",
+  "validated_against_allowed": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "s"
+  ],
+  "invalid_options": [
+    "e"
+  ],
+  "kept_options": [
+    "c"
+  ]
+}

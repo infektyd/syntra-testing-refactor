@@ -1,0 +1,108 @@
+Metadata-Version: 2.4
+Name: syntra-testing
+Version: 0.0.0
+Summary: Pure Python benchmarking suite for Syntra AI models
+Author-email: Syntra Team <hans@example.com>
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=2.1.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: datasets>=4.2.0
+Requires-Dist: pyarrow>=18.0.0
+Requires-Dist: pypdf>=4.3.0
+Requires-Dist: sympy>=1.13.0
+Requires-Dist: regex>=2024.5.15
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: tqdm>=4.66.0
+Requires-Dist: pytest>=8.3.0
+Requires-Dist: pytest-mock>=3.14.0
+Requires-Dist: flake8>=7.0.0
+Requires-Dist: reportlab>=4.0.0
+Requires-Dist: tenacity>=9.0.0
+Requires-Dist: requests>=2.32.0
+Provides-Extra: dev
+Requires-Dist: black>=24.0.0; extra == "dev"
+Requires-Dist: mypy>=1.11.0; extra == "dev"
+
+# Migrated syntraTesting Python Version
+
+## Overview
+Migrated the Swift CLIs (syntra-cmt and syntra-cmt-aggregate) to Python scripts while preserving the project structure.
+
+- **Sources/SyntraCMT/syntra_cmt.py**: The benchmark runner. Sends prompts to a local OpenAI-compatible API, computes per-response metrics, handles retries, perf merging, outputs JSONL.
+- **Sources/Shared/syntra_cmt_aggregate.py**: The aggregator. Computes cross-trial statistics (drift_deviation, unique_word_ratio_std) grouped by prompt_id, appends updated records.
+
+## Setup
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Runner (syntra_cmt.py)
+```bash
+python Sources/SyntraCMT/syntra_cmt.py \\
+  --endpoint http://127.0.0.1:8081/v1/chat/completions \\
+  --model syntra-consciousness \\
+  --input prompts/sample.jsonl \\
+  --output runs/cmt/syntra.jsonl \\
+  --trials 5 \\
+  --seed 42 \\
+  --temperature 0.7 \\
+  --merge-perf perf.jsonl \\
+  --verbose
+```
+
+Args match Swift CLI.
+
+### Aggregator (syntra_cmt_aggregate.py)
+```bash
+python Sources/Shared/syntra_cmt_aggregate.py \\
+  --input runs/cmt/syntra.jsonl \\
+  --output runs/cmt/syntra_aggregated.jsonl \\
+  --metrics stddev,unique_ratio_std
+```
+
+## Changes from Swift
+- **HTTP**: requests library
+- **JSON/Files**: stdlib json, pathlib
+- **Date Parsing**: datetime.fromisoformat + dateutil.parser (fallback/robust)
+- **Metrics**: Pure Python implementations (numpy reserved for aggregate stddev)
+- **CLI**: argparse (more structured than Swift loop)
+- **Libs**: numpy (stddev), datasets (future HF integration), requests, dateutil
+- **Async**: Sync (no need for CLI; faster startup)
+
+## Gaps / Differences
+1. **HF Datasets Integration**: Not yet in CLI. To add:
+   ```
+   # Example loader script
+   from datasets import load_dataset
+   ds = load_dataset('gsm8k', 'main', split='test')
+   prompts = [{'id': row['question_id'], 'content': row['question'], 'metadata': {'answer': row['answer']}} for row in ds]
+   # dump to jsonl
+   ```
+   Can extend syntra_cmt.py with `--hf-dataset gsm8k/main --hf-split test --prompt-field question --id-field question_id`.
+
+2. **Sentence Terminal Ratio**: Approximated with regex (split + count terminals). Swift uses custom split/range check. Minor diff possible.
+
+3. **Decode Strategies**: Python dict traversal; covers same cases.
+
+4. **No SPM/Build**: Direct py scripts; no Package.swift equiv (add pyproject.toml if packaging needed).
+
+5. **Seeds**: int64 approx (Python int unlimited).
+
+6. **Verbose Logging**: Matches Swift output.
+
+## Testing
+- No sample prompts in workspace; use runs/cmt/* as input for aggregate.
+- For runner, need API server + prompts.jsonl.
+
+## Future
+- Add HF loader to CLI.
+- Multi-threading for parallel trials.
+- More benchmarks (ARC, GSM8K) via HF args.
+- shebang + chmod +x for CLI-like usage.

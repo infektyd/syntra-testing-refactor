@@ -1,0 +1,14 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+.ran
+run/
+runs/
+.git
+.gitignore
+.DS_Store
+._*
+*.swp
+*.swo
