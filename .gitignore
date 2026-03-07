@@ -1,0 +1,5 @@
+venv/
+.venv/
+src/syntra_testing.egg-info/
+UNKNOWN.egg-info/
+.github/
