@@ -25,7 +25,7 @@ from typing import List, Dict, Any, Optional, Tuple, Iterable
 from pathlib import Path
 
 # Path setup
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TOOLS_DIR = ROOT / "Tools"
 
 SUITE_PATH_HINTS: Dict[str, List[str]] = {

@@ -115,13 +115,6 @@ def main():
     """The main entry point for the gold entry fixing script."""
     ap = argparse.ArgumentParser(
         description="Fix invalid gold entries in HF-CMT dataset",
-        add_help=False  # Temporarily to avoid conflict, but actually no need
-    )
-    ap.add_argument(
-        "--version",
-        action="version",
-        version="unknown",
-        help="Show program's version number and exit."
     )
     ap.add_argument("--version", action="version", version=get_version())
     ap.add_argument(

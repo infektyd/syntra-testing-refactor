@@ -73,7 +73,18 @@ def verify_normalization_and_tolerance(suite):
         parsed_gold = parse_numeric_list(str(num_gold))
         parsed_var = parse_numeric_list(str(var))
         eq = numeric_equal(parsed_var, parsed_gold, 0.02) if parsed_var and parsed_gold else False
-        print(f"Numeric Tol {i+1}: diff max={max(abs(x-y) if isinstance(x, tuple) and isinstance(y, tuple) else abs(float(x)-float(y)) for x, y in zip(var, num_gold) if x and y) if len(var) == len(num_gold) else 'len_mismatch':.3f}, equal at tol=0.02: {eq}")
+        max_diff = None
+        if len(var) == len(num_gold):
+            diffs = []
+            for x, y in zip(var, num_gold):
+                if isinstance(x, tuple) and isinstance(y, tuple) and len(x) == len(y):
+                    diffs.extend(abs(float(a) - float(b)) for a, b in zip(x, y))
+                else:
+                    diffs.append(abs(float(x) - float(y)))
+            if diffs:
+                max_diff = max(diffs)
+        diff_text = f"{max_diff:.3f}" if max_diff is not None else "len_mismatch"
+        print(f"Numeric Tol {i+1}: diff max={diff_text}, equal at tol=0.02: {eq}")
 
 
 def main():
