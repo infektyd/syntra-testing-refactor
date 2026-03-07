@@ -1,4 +1,4 @@
-.PHONY: test test-arc test-gsm8k test-cmt test-all bench-arc-validation bench-gsm8k-test bench-cmt-test bench-aggregate bench-clean bench-all bench-live env-check run-gsm8k-live run-arc-live run-cmt-live jules-stub jules-live copilot
+.PHONY: test test-arc test-gsm8k test-cmt test-all bench-arc-validation bench-gsm8k-test bench-cmt-test bench-aggregate bench-clean bench-all bench-live env-check run-gsm8k-live run-arc-live run-cmt-live jules-stub jules-live copilot lint
 
 # Default modes (override on make command line)
 SYNTRA_TEST_MODE ?= 1
@@ -105,6 +105,9 @@ jules-live:
 # Launch Copilot CLI with preloaded context
 copilot:
 	bash Scripts/copilot_boot.sh
+
+lint:
+	cd Tools && python3 -m py_compile grading/*.py runners/*.py
 
 .PHONY: smoke-syntra-payload
 smoke-syntra-payload:

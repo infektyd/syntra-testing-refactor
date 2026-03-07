@@ -56,7 +56,6 @@ try:
     from ..common.type_utils import type_from_id
 except ImportError:
     from common.type_utils import type_from_id  # type: ignore
-from common import logger, get_version  # type: ignore
 
 def get_type(row):
     """Gets the problem type from a data row.
