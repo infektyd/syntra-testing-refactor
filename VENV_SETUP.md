@@ -93,7 +93,7 @@ python Benchmarks/ARC/bench/datasets_arc.py --subset challenge --split validatio
 
 ### Performance
 - Python 3.13 provides performance improvements
-- numpy/pandas operations are optimized for ARM64
+- numpy/pandas operations compile for ARM64
 - Dataset caching reduces network dependency for repeated runs
 
 ## Troubleshooting

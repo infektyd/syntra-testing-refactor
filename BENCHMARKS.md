@@ -10,7 +10,7 @@ This directory contains results and configurations for standard LLM benchmarks i
 
 ## Methodology
 
-- Multiple passes with baseline and optimized prompts
+- Multiple passes with baseline and modified prompts
 - Automated grading and comparison
 - Statistical summary generation
 - Caching of Hugging Face datasets for reproducibility
