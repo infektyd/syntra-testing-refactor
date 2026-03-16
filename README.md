@@ -1,46 +1,64 @@
 # Syntra Testing Refactor
 
-Syntra Testing Refactor is a Python framework for benchmarking, testing, and evaluating LLM-based systems. It provides tools for running standardized evaluations (GSM8K, ARC, CMT), dataset handling, prompt management, and performance analysis.
+A complete Python benchmarking and evaluation framework for LLM systems. Supports GSM8K, ARC, CMT, and custom datasets with grading, visualization, and PDF report generation.
 
 ## Features
 
-- Standardized benchmark runners for multiple datasets
-- Modular tool and prompt management system
-- Automated evaluation and grading pipelines
-- Dataset caching and subsampling utilities
-- Comprehensive logging and reporting
-- Docker and CLI support for reproducible runs
+- Prompt and dataset loading (JSONL/ Hugging Face)
+- Automated evaluation runners with concurrency
+- Grading and metric calculation
+- Visualization (matplotlib) and PDF reports (reportlab + pypdf)
+- CMT extraction from PDFs
+- Reproducible benchmark pipelines
 
-## Architecture
+## Quick Start
 
-The framework is organized into:
+1. **Clone and install**
+   ```bash
+   cd syntra-testing-refactor
+   python3 -m venv venv
+   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   pip install -r requirements.txt
+   pip install -e .
+   ```
 
-- `src/`: Core Python packages for testing and tools
-- `Tools/`: Benchmark and evaluation tools
-- `prompts/`: Standardized prompt suites
-- `benchmarks/`: Evaluation scripts and metrics
-- `runs/`: Output directory (excluded from git)
+2. **Configure (optional)**
+   ```bash
+   export OPENAI_API_KEY="sk-..."
+   export HF_TOKEN="hf_..."  # for datasets
+   mkdir -p data/ runs/
+   ```
 
-## Installation
+3. **Run a benchmark**
+   ```bash
+   # Run full evaluation
+   python -m src.syntra_testing.runners.eval_runner --dataset gsm8k --output runs/gsm8k/
 
-```bash
-pip install -e .
-# or
-pip install -r requirements.txt
-```
+   # Generate visualizations and PDF report
+   python -m src.syntra_testing.tools.visualization.viz_hf_cmt --input runs/ --output runs/report.pdf
+   ```
 
-## Usage
+4. **Run tests**
+   ```bash
+   pytest tests/ -q
+   ```
 
-Run benchmarks using the Makefile or Python CLI:
+## Project Layout
 
-```bash
-make benchmark-gsm8k
-# or
-python -m src.syntra_testing.run_benchmark --dataset gsm8k
-```
+- `src/syntra_testing/`: Core package
+- `Tools/`: Benchmark and visualization tools
+- `prompts/`: Prompt templates
+- `benchmarks/`: Configuration and results
+- `runs/`: Output directory (gitignored)
 
-See `BENCHMARKS.md` for detailed evaluation results and methodology.
+## API Keys
+
+Set environment variables for providers:
+- `OPENAI_API_KEY`
+- `ANTHROPIC_API_KEY` 
+- `HF_TOKEN` (for datasets)
+
+See `FIXES.md` for troubleshooting.
 
 ## License
-
-See LICENSE file.
+MIT
