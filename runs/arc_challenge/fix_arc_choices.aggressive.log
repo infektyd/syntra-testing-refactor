@@ -1,8 +1,0 @@
-Processed runs/arc_challenge/arc_challenge_prompts.jsonl
-Total records: 299
-Fixed records: 4
-
-{"index": 89, "id": "arc_challenge_NYSEDREGENTS_2014_8_20", "changes": ["gold: 2 -> B", "converted numeric choice markers to letter markers"]}
-{"index": 97, "id": "arc_challenge_NYSEDREGENTS_2014_8_38", "changes": ["gold: 1 -> A", "converted numeric choice markers to letter markers"]}
-{"index": 156, "id": "arc_challenge_NYSEDREGENTS_2014_8_12", "changes": ["gold: 1 -> A", "converted numeric choice markers to letter markers"]}
-{"index": 234, "id": "arc_challenge_NYSEDREGENTS_2014_8_41", "changes": ["gold: 4 -> D", "converted numeric choice markers to letter markers"]}

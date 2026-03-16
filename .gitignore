@@ -3,3 +3,75 @@ venv/
 src/syntra_testing.egg-info/
 UNKNOWN.egg-info/
 .github/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv/
+env.bak/
+venv.bak/
+
+# Logs and data
+*.log
+logs/
+*.csv
+*.jsonl
+data/raw/
+data/processed/
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tmp
+*.temp
+__MACOSX/
+
+# Benchmark and test output
+runs/
+*.egg-info/
+

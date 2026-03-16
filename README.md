@@ -1,50 +1,46 @@
----
-license: mit
-task_categories:
-  - text-generation
-  - evaluation
-tags:
-  - ai-evals
-  - benchmark
-  - reasoning
-  - syntra
-  - arc
-  - gsm8k
-  - condensed-matter-theory
----
+# Syntra Testing Refactor
 
-# SyntraTesting Evals v4
+Syntra Testing Refactor is a Python framework for benchmarking, testing, and evaluating LLM-based systems. It provides tools for running standardized evaluations (GSM8K, ARC, CMT), dataset handling, prompt management, and performance analysis.
 
-Complete benchmark suite for evaluating AI models on advanced reasoning tasks.
+## Features
 
-## Contents
+- Standardized benchmark runners for multiple datasets
+- Modular tool and prompt management system
+- Automated evaluation and grading pipelines
+- Dataset caching and subsampling utilities
+- Comprehensive logging and reporting
+- Docker and CLI support for reproducible runs
 
-| Split | File | Description |
-|-------|------|-------------|
-| prompts | `data/splits/prompts.tar.gz` (~60KB) | CMT prompts, coherence structures, drift resilience, logic, ethics |
-| benchmarks | `data/splits/benchmarks.tar.gz` (~36KB) | ARC, CMT, GSM8K benchmark data and utilities |
-| runs | `data/splits/runs.tar.gz` (~4.4MB) | Sample evaluation runs with graded results |
-| resources | `data/splits/resources.tar.gz` (~500KB) | Official CMT answers, type maps, utilities |
+## Architecture
 
-## Key Files (after extraction)
+The framework is organized into:
 
-- `prompts/suites/hf_cmt.jsonl` - Main CMT benchmark prompts
-- `prompts/suites/official_cmt.jsonl` - Official CMT evaluation set  
-- `resources/official_cmt_answers.jsonl` - Gold standard answers
-- `Tools/grading/` - Grading scripts for evaluating model outputs
+- `src/`: Core Python packages for testing and tools
+- `Tools/`: Benchmark and evaluation tools
+- `prompts/`: Standardized prompt suites
+- `benchmarks/`: Evaluation scripts and metrics
+- `runs/`: Output directory (excluded from git)
+
+## Installation
+
+```bash
+pip install -e .
+# or
+pip install -r requirements.txt
+```
 
 ## Usage
 
+Run benchmarks using the Makefile or Python CLI:
+
 ```bash
-# Download and extract
-huggingface-cli download Infektyd/syntra-testing-evals-v4 --repo-type dataset --local-dir syntra-evals
-cd syntra-evals/data/splits
-tar xzf prompts.tar.gz
-tar xzf benchmarks.tar.gz
-tar xzf resources.tar.gz
+make benchmark-gsm8k
+# or
+python -m src.syntra_testing.run_benchmark --dataset gsm8k
 ```
 
-## Related
+See `BENCHMARKS.md` for detailed evaluation results and methodology.
 
-- **GitHub**: https://github.com/infektyd/syntra-testing-refactor
-- **Author**: Hans Axelsson
+## License
+
+See LICENSE file.
